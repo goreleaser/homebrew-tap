@@ -3,5 +3,5 @@
 Homebrew Formulae to @goreleaser binaries, powered by @goreleaser
 
 ```sh
-brew install goreleaser/tap/release
+brew install goreleaser/tap/goreleaser
 ```
