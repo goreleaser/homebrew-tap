@@ -1,9 +1,9 @@
 class Nfpm < Formula
   desc "NFPM is not FPM"
   homepage "https://github.com/goreleaser/nfpm"
-  url "https://github.com/goreleaser/nfpm/releases/download/v0.3.1/nfpm_0.3.1_Darwin_x86_64.tar.gz"
-  version "0.3.1"
-  sha256 "6fdd198335cfc1c5398dbe3389121b6491f85aa959d28debd8b722aa5c664847"
+  url "https://github.com/goreleaser/nfpm/releases/download/v0.3.2/nfpm_0.3.2_Darwin_x86_64.tar.gz"
+  version "0.3.2"
+  sha256 "218ef8343eddcf70484f9f9acd94cc837a365581f338e2a3ce766d79d17fe7a1"
 
   def install
     bin.install "nfpm"
