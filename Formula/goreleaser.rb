@@ -1,17 +1,12 @@
 class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  url "https://github.com/goreleaser/goreleaser/releases/download/v0.66.0/goreleaser_Darwin_x86_64.tar.gz"
-  version "0.66.0"
-  sha256 "aa364e08dbf82e6bdae655c0c848a3f2ae1e15224bcca3e3c51ff966bd5a4243"
+  url "https://github.com/goreleaser/goreleaser/releases/download/v0.66.1/goreleaser_Darwin_x86_64.tar.gz"
+  version "0.66.1"
+  sha256 "364f92aed479079f1bae36e3d464d724c89ff53e87f5bb819b42a2dc9e87b6df"
 
   def install
     bin.install "goreleaser"
-  end
-
-  def caveats; <<-EOS.undent
-    
-  EOS
   end
 
   test do
