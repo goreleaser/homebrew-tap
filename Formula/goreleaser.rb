@@ -2,9 +2,9 @@
 class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  url "https://github.com/goreleaser/goreleaser/releases/download/v0.102.0/goreleaser_Darwin_x86_64.tar.gz"
-  version "0.102.0"
-  sha256 "d90487e911237147581ee96413fb7a3d4cad18183daf4b801d7e4f2ec9b13b9e"
+  url "https://github.com/goreleaser/goreleaser/releases/download/v0.103.1/goreleaser_Darwin_x86_64.tar.gz"
+  version "0.103.1"
+  sha256 "84929d55a262db38be61a550e5354ec893798a15235bd9e324fc772de39b04dd"
 
   def install
     bin.install "goreleaser"
