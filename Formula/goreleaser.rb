@@ -2,24 +2,24 @@
 class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "0.131.1"
+  version "0.132.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goreleaser/goreleaser/releases/download/v0.131.1/goreleaser_Darwin_x86_64.tar.gz"
-    sha256 "32a4ffedbe6058f6c90391da7eda960156ee3bc6b84d4e2884c1daf10366948a"
+    url "https://github.com/goreleaser/goreleaser/releases/download/v0.132.0/goreleaser_Darwin_x86_64.tar.gz"
+    sha256 "2c9a54fee34e4eeedbd983dcaf257dd2c3fe6a5c4a7a507af0173742d515e422"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.131.1/goreleaser_Linux_x86_64.tar.gz"
-      sha256 "47fefac2e449ec7bae741986fceb1fbd04ed135e14a72898d702de6b889d3a0d"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v0.132.0/goreleaser_Linux_x86_64.tar.gz"
+      sha256 "1006b7089485e11e3db07f8ba98d9141d82f879598c98f5e1620ba3b79b83311"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goreleaser/goreleaser/releases/download/v0.131.1/goreleaser_Linux_arm64.tar.gz"
-        sha256 "88d44871e2c4662f213d41aa6233622cdd5ecd3653cba4e75f3e8324ff337d97"
+        url "https://github.com/goreleaser/goreleaser/releases/download/v0.132.0/goreleaser_Linux_arm64.tar.gz"
+        sha256 "2c82b5efba4cff3bca5c3505e23792ab23a2399a89de7255e6788fbec272ccc7"
       else
-        url "https://github.com/goreleaser/goreleaser/releases/download/v0.131.1/goreleaser_Linux_armv6.tar.gz"
-        sha256 "29fe5dad2c0129fd5c696e24e1da3a1d384660e719b6711ea980a96593d0d042"
+        url "https://github.com/goreleaser/goreleaser/releases/download/v0.132.0/goreleaser_Linux_armv6.tar.gz"
+        sha256 "9e307046a978defb453b216e3d849bb7bf30e3b82041e762fa101fe713535266"
       end
     end
   end
