@@ -1,0 +1,33 @@
+name: Tap
+on: [push]
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6.3
+    - run: gem install rubocop
+    - run: rubocop -a -f tap --except Style/StringLiterals,Style/FrozenStringLiteralComment,Naming/HeredocDelimiterNaming
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "formatter changes" -a --allow-empty
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        
+  ci:
+   runs-on: macos-latest
+   steps:
+     - uses: actions/checkout@v2
+     - name: Run brew
+       run: |
+         brew update >/dev/null
+         brew audit --strict -v ./Formula/*.rb
+         brew install -v ./Formula/*.rb
+         brew test -v ./Formula/*.rb
+   
