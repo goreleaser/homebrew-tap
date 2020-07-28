@@ -23,7 +23,7 @@ class Goreleaser < Formula
       end
     end
   end
-  
+
   depends_on "go"
 
   def install
