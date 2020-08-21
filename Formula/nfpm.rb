@@ -2,16 +2,16 @@
 class Nfpm < Formula
   desc "nFPM is not FPM"
   homepage "https://github.com/goreleaser/nfpm"
-  version "1.6.0"
+  version "1.7.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goreleaser/nfpm/releases/download/v1.6.0/nfpm_1.6.0_Darwin_x86_64.tar.gz"
-    sha256 "7de1375fa84c33a9fc65bb55f7c87992cb077bab72f8a69a13b6e2ed9ea209bd"
+    url "https://github.com/goreleaser/nfpm/releases/download/v1.7.0/nfpm_1.7.0_Darwin_x86_64.tar.gz"
+    sha256 "874075e0e325481fbf60427db56412d3f96036c4bb913e54915bfa96cb05236c"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v1.6.0/nfpm_1.6.0_Linux_x86_64.tar.gz"
-      sha256 "194b5db8c6b1954f43e60a2805cf00a155598fe537148920ab938b2ac0b28a5f"
+      url "https://github.com/goreleaser/nfpm/releases/download/v1.7.0/nfpm_1.7.0_Linux_x86_64.tar.gz"
+      sha256 "4b8166b2c35eefa7d89541f191e82819150c11f4b3342bb1e82d3a0dde732003"
     end
   end
 
