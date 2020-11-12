@@ -2,24 +2,24 @@
 class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "0.146.0"
+  version "0.147.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goreleaser/goreleaser/releases/download/v0.146.0/goreleaser_Darwin_x86_64.tar.gz"
-    sha256 "acfc0e17c9569cafd2a96d15f8b666e7af71a0d492ca7cbb479dbbd782cc00a8"
+    url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.0/goreleaser_Darwin_x86_64.tar.gz"
+    sha256 "84817b7351ada5e35aa0f00d9f9bf05f459f09a3fb6ab59e31e6cce87016f890"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.146.0/goreleaser_Linux_x86_64.tar.gz"
-      sha256 "97279a80096bc5d044a5172a205c5b80e8f313aa8137ff9a2d400bb220acd810"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.0/goreleaser_Linux_x86_64.tar.gz"
+      sha256 "fe15fedb48122a1ff4ad1dc8b6535c6eb8dca8eec483edd3800294a6187d8786"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goreleaser/goreleaser/releases/download/v0.146.0/goreleaser_Linux_arm64.tar.gz"
-        sha256 "b725da4f2e4063d30b09cf4b6dc019ee25cd2a7bb035c134a35f88c240453d2d"
+        url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.0/goreleaser_Linux_arm64.tar.gz"
+        sha256 "d24a269e1e7975fd67ca63d939c68a6fe3ac4d76879e8d94a18fa97bf147f18b"
       else
-        url "https://github.com/goreleaser/goreleaser/releases/download/v0.146.0/goreleaser_Linux_armv6.tar.gz"
-        sha256 "290e2a42991f696fe67534f4cafe5888b299f356ad8c47ed2f95248bd62aa41d"
+        url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.0/goreleaser_Linux_armv6.tar.gz"
+        sha256 "ae9b1bee79da7121959627a203abc1f9b9704257c72d24754c4ceef63bcc4a73"
       end
     end
   end
@@ -28,6 +28,9 @@ class Goreleaser < Formula
 
   def install
     bin.install "goreleaser"
+    bash_completion.install "completions/goreleaser.bash" => "goreleaser"
+    zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
+    fish_completion.install "completions/goreleaser.fish"
   end
 
   test do
