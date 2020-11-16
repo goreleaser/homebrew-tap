@@ -2,26 +2,24 @@
 class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "0.147.1"
+  version "0.147.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.1/goreleaser_Darwin_x86_64.tar.gz"
-    sha256 "b968c8c1c1fc6d34848249332e4ded08a17ff5fa8f88c15b99a0883d19ccd9ca"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.1/goreleaser_Linux_x86_64.tar.gz"
-      sha256 "9a204cca802337673949da04c89c1db8e60385ebedff76249f606c5c185cbdaf"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.1/goreleaser_Linux_arm64.tar.gz"
-        sha256 "ce949750e58e951959544895af71bae6874b70154464b22e497bda2f68f8b487"
-      else
-        url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.1/goreleaser_Linux_armv6.tar.gz"
-        sha256 "35142136e425ce181a89428f6a07bf5cf3a37a0ca238dcc50b4bdaa04a856fa7"
-      end
-    end
+    url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.2/goreleaser_Darwin_x86_64.tar.gz"
+    sha256 "6fbfe3b5eb0f74c03cf9fc95c724dc296cc088a7b98419c252679349414047a8"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.2/goreleaser_Linux_x86_64.tar.gz"
+    sha256 "2ee16694ae5be261d3f5b4fef7a700c371119f967cd55060406cee50f857bc2e"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.2/goreleaser_Linux_armv6.tar.gz"
+    sha256 "ebd1fa848b5369f9a7812c7f969794a32467850f6b14b92c885b2e72d9a774a9"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/goreleaser/goreleaser/releases/download/v0.147.2/goreleaser_Linux_arm64.tar.gz"
+    sha256 "8e7865dfeb17fcd4990fa98534f0c25baff045ca433cc35a5514dd570d3ed008"
   end
   
   depends_on "go"
