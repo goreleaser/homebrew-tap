@@ -2,16 +2,20 @@
 class Nfpm < Formula
   desc "nFPM is not FPM"
   homepage "https://github.com/goreleaser/nfpm"
-  version "2.1.1"
+  version "2.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/goreleaser/nfpm/releases/download/v2.1.1/nfpm_2.1.1_Darwin_x86_64.tar.gz"
-    sha256 "15182384c748962ba03aa5fbc097a9ff418ee578a90eb00856eda13b5f2cdd01"
+    url "https://github.com/goreleaser/nfpm/releases/download/v2.2.0/nfpm_2.2.0_Darwin_x86_64.tar.gz"
+    sha256 "657f887c270e54fa27f7c36bceab743508a66e7c2c31b67fcef01f604a81526e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/goreleaser/nfpm/releases/download/v2.1.1/nfpm_2.1.1_Linux_x86_64.tar.gz"
-    sha256 "0c08cedbcb8a973e03fe5176f467352bde19f4d556c1e8c3b16408d42169c75e"
+    url "https://github.com/goreleaser/nfpm/releases/download/v2.2.0/nfpm_2.2.0_Linux_x86_64.tar.gz"
+    sha256 "e63c282a432a95ba7859b3aca0c3f0e03bdfc11411c7759d66b0f24df051901b"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/goreleaser/nfpm/releases/download/v2.2.0/nfpm_2.2.0_Linux_arm64.tar.gz"
+    sha256 "42cfb9fdc5f294fbd240ce0880a38ba583f9b9b6a10e0509ad7e28cbf8090fa9"
   end
 
   def install
