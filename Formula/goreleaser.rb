@@ -5,33 +5,33 @@
 class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "0.170.0"
+  version "0.171.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.170.0/goreleaser_Darwin_x86_64.tar.gz"
-      sha256 "2c878f1ea86cd16516eb77c5fee5ae50e93906d7e0019fc1cef8d9f26db85a43"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v0.171.0/goreleaser_Darwin_x86_64.tar.gz"
+      sha256 "b53590a1b8a6ab59908d11a89b13dc7c97170b13fe6e23e438455822a139d454"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.170.0/goreleaser_Darwin_arm64.tar.gz"
-      sha256 "95bf7582836221e1c97fa2776ed679d7112048140f425ab034f514312788e8d5"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v0.171.0/goreleaser_Darwin_arm64.tar.gz"
+      sha256 "76bc03acccbe8a769c8d2ea8b9fc2825911276df262ce55e5c0bf29c0654ddb5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.170.0/goreleaser_Linux_x86_64.tar.gz"
-      sha256 "1c0f240deab7a746d0937711346cdb7e01cd72d608ed10ff09aaa39f2ae363ac"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v0.171.0/goreleaser_Linux_x86_64.tar.gz"
+      sha256 "782c178358600f6cdad94664c0c145614b05392fc27237b31d6a9f5255651617"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.170.0/goreleaser_Linux_armv6.tar.gz"
-      sha256 "da001c7af9dfeb392ae720a3e2b60418ed6d5bfa4a89ed52c4d96283078aab19"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v0.171.0/goreleaser_Linux_armv6.tar.gz"
+      sha256 "d947041180ce24aab2726dace61c67a23eb21710c8aa780fe613a5b482efcd79"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v0.170.0/goreleaser_Linux_arm64.tar.gz"
-      sha256 "8cfcd8a8025ae6ac2119b2291834bff2db5103d820f5039765f7a79a5650ad05"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v0.171.0/goreleaser_Linux_arm64.tar.gz"
+      sha256 "1b67d0c7af869a46d419562fb8fc0f78de9e29cce7c402a4f8967e8b339e745f"
     end
   end
 
