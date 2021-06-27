@@ -5,33 +5,33 @@
 class GoreleaserPro < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "0.171.1-pro"
+  version "0.172.0-pro"
   license "Copyright Becker Software LTDA"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.171.1-pro/goreleaser-pro_Darwin_x86_64.tar.gz"
-      sha256 "58d07495d975f676255d11f617235d47e71c750426bb7bd97d08991bfc4dacb4"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.172.0-pro/goreleaser-pro_Darwin_x86_64.tar.gz"
+      sha256 "0f667abb8abbe6498434187148cdee4bde90d293f78a12000e98a415cb6e6084"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.171.1-pro/goreleaser-pro_Darwin_arm64.tar.gz"
-      sha256 "79247455c99038b889c0e8bdd3569a2c826467e2461c28ff6b60126890a1e435"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.172.0-pro/goreleaser-pro_Darwin_arm64.tar.gz"
+      sha256 "3dc86046920be658297fbe4a7db63b8bdb3c7cf0f91a3e0160b7eb63aa96d90e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.171.1-pro/goreleaser-pro_Linux_x86_64.tar.gz"
-      sha256 "6f7cf004e6430ad791e27049bef944ca6b5a140db65c31a9ce87497dde3b4286"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.172.0-pro/goreleaser-pro_Linux_x86_64.tar.gz"
+      sha256 "5d9e96566da8fefde2a4925b8a535011bba10c0d6cd59ef7cab9a25fdfde7d8c"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.171.1-pro/goreleaser-pro_Linux_armv6.tar.gz"
-      sha256 "21dcf092bc1c92832ae4dc3f455e67c08cd934abc696d0cb2985b9196e213d2b"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.172.0-pro/goreleaser-pro_Linux_armv6.tar.gz"
+      sha256 "faa3058c387cbbea48458e22d64dfa073acd3b2661c3c05a763baf27b8c4f524"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.171.1-pro/goreleaser-pro_Linux_arm64.tar.gz"
-      sha256 "32e9a6d9bc9750da8370cb8b9506e14b1d2c0d97ca75afb69c5248c98b8b2f49"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.172.0-pro/goreleaser-pro_Linux_arm64.tar.gz"
+      sha256 "f84782db0e598e3f76fb8b67fdb14a024cb07a81266fd1cc61d716ee3a8c0ab3"
     end
   end
 
