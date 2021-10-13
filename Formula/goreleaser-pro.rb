@@ -5,27 +5,27 @@
 class GoreleaserPro < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "0.182.0-pro"
+  version "0.182.1-pro"
   license "Copyright Becker Software LTDA"
   bottle :unneeded
 
   on_macos do
-    url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.0-pro/goreleaser-pro_Darwin_all.tar.gz"
-    sha256 "cbeffc28cd4394de83fc64f10b9f9cc057521b95abda9697fed15efe605ef848"
+    url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.1-pro/goreleaser-pro_Darwin_all.tar.gz"
+    sha256 "6126147848b7b9e29c27756423ea6336d73de1d74b4436025b26269ba4f98b10"
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.0-pro/goreleaser-pro_Linux_armv6.tar.gz"
-      sha256 "0afd8d2f5b15cc9da3114b7bd0eb4236336c2faf1435a4ce37f578cec357f8da"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.1-pro/goreleaser-pro_Linux_armv6.tar.gz"
+      sha256 "3f830b93b9aa09b9bff2d2bac9cb3cdfe4e991db803ec2a085876483a991ad89"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.0-pro/goreleaser-pro_Linux_x86_64.tar.gz"
-      sha256 "be8bd05b259e99a4144dc38eb00c0f6f7b721acd2ab6f37871604c959694a2d1"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.1-pro/goreleaser-pro_Linux_x86_64.tar.gz"
+      sha256 "1c76a2ccffb4df8d248dbadb0052924b8a15caed4370849e9c239a3ee739f8a8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.0-pro/goreleaser-pro_Linux_arm64.tar.gz"
-      sha256 "4d0a16f3800598425316b9edd2c435fd605b5af1ba3c363ad09f05643a181730"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v0.182.1-pro/goreleaser-pro_Linux_arm64.tar.gz"
+      sha256 "b5e447399c9bd7c8a941abb349795a2f51349adbde7927af862de1c2958d2e66"
     end
   end
 
