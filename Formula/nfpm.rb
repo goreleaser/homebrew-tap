@@ -5,29 +5,29 @@
 class Nfpm < Formula
   desc "nFPM is a simple, 0-dependencies, deb, rpm and apk packager."
   homepage "https://nfpm.goreleaser.com"
-  version "2.7.0"
+  version "2.7.1"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.0/nfpm_2.7.0_Darwin_arm64.tar.gz"
-      sha256 "f1d54943966129c7e22f9d24254899328bfa18b20f6f91db3de9c53ee807e9e1"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.1/nfpm_2.7.1_Darwin_arm64.tar.gz"
+      sha256 "aab245e414edfc8efe976292cb08a52b0ec1fd2f81214615d132c2ed68d34f95"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.0/nfpm_2.7.0_Darwin_x86_64.tar.gz"
-      sha256 "ab17ffc98123e5125c1afe30d47679e0c499a8dc5e89299e0537c7b85281218d"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.1/nfpm_2.7.1_Darwin_x86_64.tar.gz"
+      sha256 "6d8ec6285703ffdd755440540782acf696d91f3a84cda242d0c13910337ebac5"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.0/nfpm_2.7.0_Linux_arm64.tar.gz"
-      sha256 "1011ebe65500bac9e3dfc93c1cfb1330acff6427b879c5a1753ce1ec4c6d7efa"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.1/nfpm_2.7.1_Linux_arm64.tar.gz"
+      sha256 "258426c7be38d363de330353bdeff30fb4d55b0dc5ba27da663413a2b6326d6e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.0/nfpm_2.7.0_Linux_x86_64.tar.gz"
-      sha256 "00219e382f8a9145198d0dad81bbc8100310463b83cc78c69a27d6bb14975f32"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.7.1/nfpm_2.7.1_Linux_x86_64.tar.gz"
+      sha256 "32e2152c6c84f292206934153d536e5999213faf35795510c5085db11b04372c"
     end
   end
 
