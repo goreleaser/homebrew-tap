@@ -7,7 +7,6 @@ class Nfpm < Formula
   homepage "https://nfpm.goreleaser.com"
   version "2.7.1"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
