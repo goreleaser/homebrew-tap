@@ -5,13 +5,13 @@
 class Nfpm < Formula
   desc "nFPM is a simple, 0-dependencies, deb, rpm and apk packager."
   homepage "https://nfpm.goreleaser.com"
-  version "2.11.0"
+  version "2.11.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.0/nfpm_2.11.0_Darwin_arm64.tar.gz"
-      sha256 "22ab28cc95d7deafbe990d80505d76867375077da9976bdaa3c5927e25deae9f"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.1/nfpm_2.11.1_Darwin_arm64.tar.gz"
+      sha256 "1090d0d022b6514b24f53363cdab06cec5bd6c23b1a0b87c7f01d0915e72ee62"
 
       def install
         bin.install "nfpm"
@@ -21,8 +21,8 @@ class Nfpm < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.0/nfpm_2.11.0_Darwin_x86_64.tar.gz"
-      sha256 "fadc6b4bf86ef02f9de8e57fccc717c5c848d032a45aed1e7374a6c76180ae51"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.1/nfpm_2.11.1_Darwin_x86_64.tar.gz"
+      sha256 "eae1a4505fb505bca9ed0d35388f1324af47ebadaf904eed24aede12a942329c"
 
       def install
         bin.install "nfpm"
@@ -35,8 +35,8 @@ class Nfpm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.0/nfpm_2.11.0_Linux_arm64.tar.gz"
-      sha256 "0deb64ea01510f2e71981fe384010cb5e8bbf11eecd546e4fe96a10f3a547994"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.1/nfpm_2.11.1_Linux_arm64.tar.gz"
+      sha256 "d054b28269caaa2e75c36448035254eeeaba6ee5d9e31f4321d5fb957ac32538"
 
       def install
         bin.install "nfpm"
@@ -46,8 +46,8 @@ class Nfpm < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.0/nfpm_2.11.0_Linux_x86_64.tar.gz"
-      sha256 "b2b257873553e1e6dc7b61a1fc2ab7b170ad5b1b57caff3506cca53a525aecaa"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.11.1/nfpm_2.11.1_Linux_x86_64.tar.gz"
+      sha256 "5b0c0c74ee166d1837b9add9fb4bb1821baa49372e77e21279db66d95ebbd5fc"
 
       def install
         bin.install "nfpm"
