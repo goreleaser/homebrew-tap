@@ -5,25 +5,13 @@
 class Goreleaser < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
-    url "https://github.com/goreleaser/goreleaser/releases/download/v1.1.0/goreleaser_Darwin_all.tar.gz"
-    sha256 "3ddeeed4ea1ffcb5727605fd4cb8b8fc9825732f2b91fdf99a2c992a2da14a0f"
-
-    def install
-      bin.install "goreleaser"
-      bash_completion.install "completions/goreleaser.bash" => "goreleaser"
-      zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
-      fish_completion.install "completions/goreleaser.fish"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v1.1.0/goreleaser_Linux_armv6.tar.gz"
-      sha256 "8646b8aba3fc12bb438c8389a07423f9f0cf5e5e4385619105058a86439c0cc4"
+    if Hardware::CPU.arm?
+      url "https://github.com/goreleaser/goreleaser/releases/download/v1.2.0/goreleaser_Darwin_arm64.tar.gz"
+      sha256 "758fd4518c715f219c891c44bcdde5098acb0ce46b41aa6dfc498f63ab69ce0d"
 
       def install
         bin.install "goreleaser"
@@ -33,8 +21,22 @@ class Goreleaser < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v1.1.0/goreleaser_Linux_x86_64.tar.gz"
-      sha256 "10a6356fc1762458b4e4bbb388d0daab182f2eca2c314b8790b8017ca1e284d1"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v1.2.0/goreleaser_Darwin_x86_64.tar.gz"
+      sha256 "abe1456a1839efb47d7bd6217b084a588e12f1ae9e25b526bcf21acf8a8cdd41"
+
+      def install
+        bin.install "goreleaser"
+        bash_completion.install "completions/goreleaser.bash" => "goreleaser"
+        zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
+        fish_completion.install "completions/goreleaser.fish"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/goreleaser/goreleaser/releases/download/v1.2.0/goreleaser_Linux_x86_64.tar.gz"
+      sha256 "1eefdfccef6b82512c7341712bfa3c8832c33d4eac4a2da8b377f3f692a521ef"
 
       def install
         bin.install "goreleaser"
@@ -44,8 +46,19 @@ class Goreleaser < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser/releases/download/v1.1.0/goreleaser_Linux_arm64.tar.gz"
-      sha256 "ec083adee5706cd945b4a2f46772d91cf11548b39b4a51bb3628cd5c4c3baba8"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v1.2.0/goreleaser_Linux_arm64.tar.gz"
+      sha256 "7fa3f5333f852a66f7e1896d33a99dd76161bbf81f724891809b67ccf7c92b55"
+
+      def install
+        bin.install "goreleaser"
+        bash_completion.install "completions/goreleaser.bash" => "goreleaser"
+        zsh_completion.install "completions/goreleaser.zsh" => "_goreleaser"
+        fish_completion.install "completions/goreleaser.fish"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/goreleaser/goreleaser/releases/download/v1.2.0/goreleaser_Linux_armv7.tar.gz"
+      sha256 "dc46d4f23d9290d10392f24fe301b314631150f43ae7801c932c23b474e63586"
 
       def install
         bin.install "goreleaser"
