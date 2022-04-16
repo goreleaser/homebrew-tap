@@ -5,13 +5,13 @@
 class GoreleaserPro < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "1.8.0-pro"
+  version "1.8.1-pro"
   license "Copyright Becker Software LTDA"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.8.0-pro/goreleaser-pro_Darwin_arm64.tar.gz"
-      sha256 "c6f84ffbcf5cbafa47ab75fc5f2c5a41d63990537f9e265d183a9dd70a8c5fd6"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.8.1-pro/goreleaser-pro_Darwin_arm64.tar.gz"
+      sha256 "b856bf29cd930ac75fd5c827412931be7a90e9b03811a49347577ef7ebbca356"
 
       def install
         bin.install "goreleaser"
@@ -25,8 +25,8 @@ class GoreleaserPro < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.8.0-pro/goreleaser-pro_Linux_armv7.tar.gz"
-      sha256 "bb943ebc4452d6d833dba6a77a00d9956ce39a8f031bd6ce7b8b824f720d8ce9"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.8.1-pro/goreleaser-pro_Linux_armv7.tar.gz"
+      sha256 "b6143128b007f51d2e7a2a86cf0114f6571e71ee2fe9210c3b002f49eb6566ab"
 
       def install
         bin.install "goreleaser"
@@ -37,8 +37,8 @@ class GoreleaserPro < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.8.0-pro/goreleaser-pro_Linux_arm64.tar.gz"
-      sha256 "bda40f40a311341092a7b1c746a1b7912a43235d81bde4e83a79a5ce5ade42fa"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.8.1-pro/goreleaser-pro_Linux_arm64.tar.gz"
+      sha256 "86e4a5f5e584f7e7960bf1dcc0e8536a683cd318cd3b43999990adede3305275"
 
       def install
         bin.install "goreleaser"
