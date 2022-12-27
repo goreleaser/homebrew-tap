@@ -14,7 +14,7 @@ class GoreleaserPro < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.14.0-pro/goreleaser-pro_Darwin_arm64.tar.gz"
-      sha256 "0c478ccc3a96b893e26c83c936b3d8a1bbf3dbed7f35b77db5fb0883cd342412"
+      sha256 "83eace73238d277d417b13dc46ad1fdb23ca3f6a5bd30aef71429dfa741d6f0e"
 
       def install
         bin.install "goreleaser"
@@ -26,7 +26,7 @@ class GoreleaserPro < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.14.0-pro/goreleaser-pro_Darwin_x86_64.tar.gz"
-      sha256 "2c722df7dad514c526decd3b25cadf652109643114f2947b801e95d7ee1c89f4"
+      sha256 "a48a00c5231eb4e5f72a7895eb54b82a8af2ac90a66c484bbef2c956ef3d649b"
 
       def install
         bin.install "goreleaser"
@@ -39,9 +39,9 @@ class GoreleaserPro < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.14.0-pro/goreleaser-pro_Linux_x86_64.tar.gz"
-      sha256 "22813e3219ba0ab9b4a6b243acb1d05b27e98a0a64348497ec0c30082672e4ac"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.14.0-pro/goreleaser-pro_Linux_arm64.tar.gz"
+      sha256 "18b9764323e0f818afc2c78bff19c5f3a1fa23c32c0ce43dce86d255000fffba"
 
       def install
         bin.install "goreleaser"
@@ -51,9 +51,9 @@ class GoreleaserPro < Formula
         man1.install "manpages/goreleaser.1.gz"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.14.0-pro/goreleaser-pro_Linux_arm64.tar.gz"
-      sha256 "3013f20c95f62b987938a3ae8b2b014cd8b328d23388130ad655485966d3667e"
+    if Hardware::CPU.intel?
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.14.0-pro/goreleaser-pro_Linux_x86_64.tar.gz"
+      sha256 "e0a1d0de42b4f11031a3bdd47b7f8e74e052d17d3ec38c4c4b5e9b3d748a1ba4"
 
       def install
         bin.install "goreleaser"
