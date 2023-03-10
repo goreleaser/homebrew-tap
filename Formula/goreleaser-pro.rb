@@ -5,7 +5,7 @@
 class GoreleaserPro < Formula
   desc "Deliver Go binaries as fast and easily as possible"
   homepage "https://goreleaser.com"
-  version "1.16.0-pro"
+  version "1.16.1-pro"
   license "Copyright Becker Software LTDA"
 
   depends_on "go" => :optional
@@ -13,8 +13,8 @@ class GoreleaserPro < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.0-pro/goreleaser-pro_Darwin_arm64.tar.gz"
-      sha256 "959ca9120addeaa15cef8d7a313d5193b24289bd192468b2ef3b54deb5a90840"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.1-pro/goreleaser-pro_Darwin_arm64.tar.gz"
+      sha256 "f843f9ea772d285471227435c4ba54c9aca514bff65374d81f9d4b2a39797bbd"
 
       def install
         bin.install "goreleaser"
@@ -25,8 +25,8 @@ class GoreleaserPro < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.0-pro/goreleaser-pro_Darwin_x86_64.tar.gz"
-      sha256 "edf0c3497a489bb11900d0e1f7e4afbe67fa452e4f2349c7d28308d378d12897"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.1-pro/goreleaser-pro_Darwin_x86_64.tar.gz"
+      sha256 "6a4ac6644b79c23c0163f22ce86bf913c521c79458732cda9c1ebc335cfaa2c4"
 
       def install
         bin.install "goreleaser"
@@ -39,9 +39,9 @@ class GoreleaserPro < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.0-pro/goreleaser-pro_Linux_arm64.tar.gz"
-      sha256 "fbf82cbd5d811aba9b14922273b1cbf23bc8c97a3ba939bce5831bd37f49dca8"
+    if Hardware::CPU.intel?
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.1-pro/goreleaser-pro_Linux_x86_64.tar.gz"
+      sha256 "b41b8be069fa6e1c75fb8cd18363a19641ec321cf10154eb481e2fc98e228576"
 
       def install
         bin.install "goreleaser"
@@ -51,9 +51,9 @@ class GoreleaserPro < Formula
         man1.install "manpages/goreleaser.1.gz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.0-pro/goreleaser-pro_Linux_x86_64.tar.gz"
-      sha256 "4b370be154caafd9bf68d77988136ff101562ba4a04dd29631b7085ae1cc48d4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v1.16.1-pro/goreleaser-pro_Linux_arm64.tar.gz"
+      sha256 "82e221caa72c6926060049756e6c4c195edd47f4709880af625d94d72f772427"
 
       def install
         bin.install "goreleaser"
