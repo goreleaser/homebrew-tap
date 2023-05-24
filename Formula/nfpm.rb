@@ -5,13 +5,13 @@
 class Nfpm < Formula
   desc "nFPM is a simple, 0-dependencies, deb, rpm and apk packager."
   homepage "https://nfpm.goreleaser.com"
-  version "2.28.0"
+  version "2.29.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.28.0/nfpm_2.28.0_Darwin_arm64.tar.gz"
-      sha256 "9fdfd9871df2877388bbd71e505ee9524470d7fd23d7074ea8cc7ea0b42b88b7"
+    if Hardware::CPU.intel?
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.29.0/nfpm_2.29.0_Darwin_x86_64.tar.gz"
+      sha256 "40d5a127279cabf203247f82b1320c5c8bed90428743dad728dcb4ab1e6f2ffb"
 
       def install
         bin.install "nfpm"
@@ -21,9 +21,9 @@ class Nfpm < Formula
         man1.install "manpages/nfpm.1.gz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.28.0/nfpm_2.28.0_Darwin_x86_64.tar.gz"
-      sha256 "3bcc807a05ba3a0dbf62409064cd165256b9dcae2d317aa44b6c321142818a3e"
+    if Hardware::CPU.arm?
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.29.0/nfpm_2.29.0_Darwin_arm64.tar.gz"
+      sha256 "7423944d073d225fcd5e8d09d87f04653e25b6d068f23f387d0a998be8026c1c"
 
       def install
         bin.install "nfpm"
@@ -37,8 +37,8 @@ class Nfpm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.28.0/nfpm_2.28.0_Linux_arm64.tar.gz"
-      sha256 "0754838455f61adfff821be0404965f6844d42e883f227c6c973f404d422e890"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.29.0/nfpm_2.29.0_Linux_arm64.tar.gz"
+      sha256 "1d5a390b581d05cac12c3ac37e1830811cfe61c7898d16e673c4d49854abd8ce"
 
       def install
         bin.install "nfpm"
@@ -49,8 +49,8 @@ class Nfpm < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.28.0/nfpm_2.28.0_Linux_x86_64.tar.gz"
-      sha256 "c948faaed97ca16ac2a4e24c42119606130ee0b371011a203d7a1c34ff422ea0"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.29.0/nfpm_2.29.0_Linux_x86_64.tar.gz"
+      sha256 "c9df8beb08fbeb38739fbb8e30ec0b790786b5476cc2da4f3a8209d1e6cffce3"
 
       def install
         bin.install "nfpm"
