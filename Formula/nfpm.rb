@@ -10,7 +10,7 @@ class Nfpm < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_ 2.30.0_Darwin_x86_64.tar.gz"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_.2.30.0_Darwin_x86_64.tar.gz"
       sha256 "a37d524d116a006d6521567f3e3ea10baab43367c48663fc9f523cdafa5e60f7"
 
       def install
@@ -22,7 +22,7 @@ class Nfpm < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_ 2.30.0_Darwin_arm64.tar.gz"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_.2.30.0_Darwin_arm64.tar.gz"
       sha256 "63f91709b0110d0cce6a73a10f284faa8b03317e5833b70552d836c2d8bd59aa"
 
       def install
@@ -37,7 +37,7 @@ class Nfpm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_ 2.30.0_Linux_arm64.tar.gz"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_.2.30.0_Linux_arm64.tar.gz"
       sha256 "1d54e1b47837806d2dbda6244ea9fa32ea50807e2c981bb65354200ce82f9b74"
 
       def install
@@ -49,7 +49,7 @@ class Nfpm < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_ 2.30.0_Linux_x86_64.tar.gz"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.30.0/nfpm_.2.30.0_Linux_x86_64.tar.gz"
       sha256 "53d9717ad3b3953d2c78534ec67e0293c377f41e17d9006eeb800b8b564a3c65"
 
       def install
