@@ -5,20 +5,20 @@
 class Chglog < Formula
   desc "chglog is a changelog management library and tool"
   homepage "https://github.com/goreleaser/chglog"
-  version "0.5.0"
+  version "0.6.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.5.0/chglog_Darwin_arm64.tar.gz"
-      sha256 "e2e78c69675fb165e98c770ecbad410d22246713b0cc75f600eccc5b884f980f"
+    if Hardware::CPU.intel?
+      url "https://github.com/goreleaser/chglog/releases/download/v0.6.0/chglog_Darwin_x86_64.tar.gz"
+      sha256 "a7b1fd0ee5bd2d4a1f0b1d4ef9ef9a77634f646648ee10e3ac65b77d34eca2de"
 
       def install
         bin.install "chglog"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.5.0/chglog_Darwin_x86_64.tar.gz"
-      sha256 "1eb4e57605fd86560c550ede1e61fc3c2b38dce75952304b4a51b4e9cec65b43"
+    if Hardware::CPU.arm?
+      url "https://github.com/goreleaser/chglog/releases/download/v0.6.0/chglog_Darwin_arm64.tar.gz"
+      sha256 "a13e13d73f3776d73b728c942d2849f1beb038ae3d594a36296a669b7817190d"
 
       def install
         bin.install "chglog"
@@ -27,17 +27,17 @@ class Chglog < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.5.0/chglog_Linux_arm64.tar.gz"
-      sha256 "636a9b83ce8c9acfb9a0772b71f53fd15416bd873d782962ed45ed2f0c59304d"
+    if Hardware::CPU.intel?
+      url "https://github.com/goreleaser/chglog/releases/download/v0.6.0/chglog_Linux_x86_64.tar.gz"
+      sha256 "787c426b4d13dd3f6e3750ac6368108a67189fc56a3a27b60949369e55bc9e89"
 
       def install
         bin.install "chglog"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.5.0/chglog_Linux_x86_64.tar.gz"
-      sha256 "7b46aa7e35c08ab566d74bd1298454a9e606d2baeb007e9dbded492dc3f887a5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/goreleaser/chglog/releases/download/v0.6.0/chglog_Linux_arm64.tar.gz"
+      sha256 "d0a04e525461526b463d0c9700e39ebe092f956d1b5ef4625d045205a21fd15b"
 
       def install
         bin.install "chglog"
