@@ -5,7 +5,7 @@
 class GoreleaserPro < Formula
   desc "Deliver Go binaries as fast and easily as possible."
   homepage "https://goreleaser.com"
-  version "2.3.0-pro"
+  version "2.3.1-pro"
   license "Copyright Becker Software LTDA"
 
   depends_on "git"
@@ -13,8 +13,8 @@ class GoreleaserPro < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.0-pro/goreleaser-pro_Darwin_x86_64.tar.gz"
-      sha256 "94de1a77c3cc5fe8836c6ad750f1e607fc5a23efef7bbf68a7fa200541848a69"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.1-pro/goreleaser-pro_Darwin_x86_64.tar.gz"
+      sha256 "eac02532451e225bbf8f8adf535e197c1fed415b02ba832a0cbb21b46c009d94"
 
       def install
         bin.install "goreleaser"
@@ -25,8 +25,8 @@ class GoreleaserPro < Formula
       end
     end
     on_arm do
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.0-pro/goreleaser-pro_Darwin_arm64.tar.gz"
-      sha256 "a037c7b489379e3146ab30288c5c471b4aafd4e80395c8cb1c1b63a44e24d02d"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.1-pro/goreleaser-pro_Darwin_arm64.tar.gz"
+      sha256 "cb26c954036c5f8fdbaadb871610bcb441359ad246deb5c262f97b7c329412a8"
 
       def install
         bin.install "goreleaser"
@@ -41,8 +41,8 @@ class GoreleaserPro < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.0-pro/goreleaser-pro_Linux_x86_64.tar.gz"
-        sha256 "b786f939a8046ee5d37b2b06b6cd274757d89986478a288cd913ff3c85af739d"
+        url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.1-pro/goreleaser-pro_Linux_x86_64.tar.gz"
+        sha256 "f6c3b0cc517b4eb3c5cb8e331d6382a6ee1744714848b4e257af17c11593a8c9"
 
         def install
           bin.install "goreleaser"
@@ -55,8 +55,8 @@ class GoreleaserPro < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.0-pro/goreleaser-pro_Linux_arm64.tar.gz"
-        sha256 "dfd83a1c49a5ad93769d280af545bd3b73b28e03fec37d6fcafe5e3ac84299cf"
+        url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.1-pro/goreleaser-pro_Linux_arm64.tar.gz"
+        sha256 "fedfb3dd80ea0dbcf14e6139401f85476bb03255576b17091f9c338f4b97d43f"
 
         def install
           bin.install "goreleaser"
