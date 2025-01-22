@@ -69,7 +69,7 @@ class GoreleaserProAT1 < Formula
     end
   end
 
-  conflicts_with "goreleaser-pro"
+  conflicts_with "goreleaser"
 
   test do
     system "#{bin}/goreleaser -v"

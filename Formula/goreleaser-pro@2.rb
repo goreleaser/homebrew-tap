@@ -8,7 +8,6 @@ class GoreleaserProAT2 < Formula
   version "2.6.0-pro"
   license "Copyright Becker Software LTDA"
 
-  depends_on "bun" => :optional
   depends_on "deno" => :optional
   depends_on "git"
   depends_on "go" => :optional
@@ -73,7 +72,7 @@ class GoreleaserProAT2 < Formula
     end
   end
 
-  conflicts_with "goreleaser-pro"
+  conflicts_with "goreleaser"
 
   test do
     system "#{bin}/goreleaser -v"

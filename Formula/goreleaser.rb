@@ -9,7 +9,6 @@ class Goreleaser < Formula
   license "MIT"
 
   depends_on "bun" => :optional
-  depends_on "deno" => :optional
   depends_on "git"
   depends_on "go" => :optional
   depends_on "rustup" => :optional

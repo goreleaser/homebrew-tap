@@ -9,7 +9,6 @@ class GoreleaserPro < Formula
   license "Copyright Becker Software LTDA"
 
   depends_on "bun" => :optional
-  depends_on "deno" => :optional
   depends_on "git"
   depends_on "go" => :optional
   depends_on "rustup" => :optional
@@ -73,7 +72,7 @@ class GoreleaserPro < Formula
     end
   end
 
-  conflicts_with "goreleaser-pro"
+  conflicts_with "goreleaser"
 
   test do
     system "#{bin}/goreleaser -v"
