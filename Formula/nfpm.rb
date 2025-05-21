@@ -5,13 +5,13 @@
 class Nfpm < Formula
   desc "nFPM is a simple, 0-dependencies, deb, rpm, and apk packager."
   homepage "https://nfpm.goreleaser.com"
-  version "2.42.0"
+  version "2.42.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.42.0/nfpm_2.42.0_Darwin_x86_64.tar.gz"
-      sha256 "d3dacc5531e597ec065160de1080abe65e907d3f41f1f6e1b4176068f65d979f"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.42.1/nfpm_2.42.1_Darwin_x86_64.tar.gz"
+      sha256 "fc62883a1cc4cb4f079a5e7e1fe104fcd5e353cfbb0859a2b318db39d85835ba"
 
       def install
         bin.install "nfpm"
@@ -22,8 +22,8 @@ class Nfpm < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/nfpm/releases/download/v2.42.0/nfpm_2.42.0_Darwin_arm64.tar.gz"
-      sha256 "a44315b8c64cc0d897ae2dc98137abbf50b603abc001cc3b3d96c07e29785214"
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.42.1/nfpm_2.42.1_Darwin_arm64.tar.gz"
+      sha256 "d30df28735f4791b0281a79044dfadb62d7732cbfca97a9d351ecbbfef7e2eb5"
 
       def install
         bin.install "nfpm"
@@ -36,32 +36,26 @@ class Nfpm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/goreleaser/nfpm/releases/download/v2.42.0/nfpm_2.42.0_Linux_x86_64.tar.gz"
-        sha256 "b4d7b186fadb562a8d24a650f8f9930f00f6a39808de2514136edac77d5faf87"
-
-        def install
-          bin.install "nfpm"
-          bash_completion.install "completions/nfpm.bash" => "nfpm"
-          zsh_completion.install "completions/nfpm.zsh" => "_nfpm"
-          fish_completion.install "completions/nfpm.fish"
-          man1.install "manpages/nfpm.1.gz"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.42.1/nfpm_2.42.1_Linux_x86_64.tar.gz"
+      sha256 "2a3b482acbcf23cd76e29fcc1de13a20afda96e844eae2c238bc40b5eb502e71"
+      def install
+        bin.install "nfpm"
+        bash_completion.install "completions/nfpm.bash" => "nfpm"
+        zsh_completion.install "completions/nfpm.zsh" => "_nfpm"
+        fish_completion.install "completions/nfpm.fish"
+        man1.install "manpages/nfpm.1.gz"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/goreleaser/nfpm/releases/download/v2.42.0/nfpm_2.42.0_Linux_arm64.tar.gz"
-        sha256 "3ee9f8754aead2dd3e2470510b154e7e45f5d0c921c617949f5e6deedc8e3265"
-
-        def install
-          bin.install "nfpm"
-          bash_completion.install "completions/nfpm.bash" => "nfpm"
-          zsh_completion.install "completions/nfpm.zsh" => "_nfpm"
-          fish_completion.install "completions/nfpm.fish"
-          man1.install "manpages/nfpm.1.gz"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/goreleaser/nfpm/releases/download/v2.42.1/nfpm_2.42.1_Linux_arm64.tar.gz"
+      sha256 "147286a70a5bc089d7824f610a8b1073298dae47434faa99149cb877798a013d"
+      def install
+        bin.install "nfpm"
+        bash_completion.install "completions/nfpm.bash" => "nfpm"
+        zsh_completion.install "completions/nfpm.zsh" => "_nfpm"
+        fish_completion.install "completions/nfpm.fish"
+        man1.install "manpages/nfpm.1.gz"
       end
     end
   end
