@@ -5,20 +5,20 @@
 class Chglog < Formula
   desc "chglog is a changelog management library and tool"
   homepage "https://github.com/goreleaser/chglog"
-  version "0.7.2"
+  version "0.7.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.7.2/chglog_Darwin_x86_64.tar.gz"
-      sha256 "13ba7b261617233d4d26d4d157f03807ad07bb030c45c869a927b79d49ccc422"
+      url "https://github.com/goreleaser/chglog/releases/download/v0.7.3/chglog_Darwin_x86_64.tar.gz"
+      sha256 "78f2375f99f63d25ac3f8250db96cbf6538062ac617311e9284b390bac84f9f9"
 
       def install
         bin.install "chglog"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.7.2/chglog_Darwin_arm64.tar.gz"
-      sha256 "1e5e08b5a409c1f03b7ad6760d985d9d1a7f64cb7b8df60f651e0b94fe3b8e53"
+      url "https://github.com/goreleaser/chglog/releases/download/v0.7.3/chglog_Darwin_arm64.tar.gz"
+      sha256 "cd8d1c186a2fbb788435a4027a59ebc0b42a7dc7633610d468d7acd05f616535"
 
       def install
         bin.install "chglog"
@@ -28,15 +28,15 @@ class Chglog < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.7.2/chglog_Linux_x86_64.tar.gz"
-      sha256 "0a0aeb63a122f3558b6aa10d55ce59256116e741ce77f1d84732f5189cd0d8ef"
+      url "https://github.com/goreleaser/chglog/releases/download/v0.7.3/chglog_Linux_x86_64.tar.gz"
+      sha256 "585fff2466b8b908ddb3d102ee1e8e109771281e111bbeb52b3fbc324d61da07"
       def install
         bin.install "chglog"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/goreleaser/chglog/releases/download/v0.7.2/chglog_Linux_arm64.tar.gz"
-      sha256 "84950cb114e4e6d04a365a4e0e4d60268adb54642e555d1fbe9b316a9c866cff"
+      url "https://github.com/goreleaser/chglog/releases/download/v0.7.3/chglog_Linux_arm64.tar.gz"
+      sha256 "1ce12e183748d0238dbef3c753c14223ffad8adb0ae95f02bc56337bd68207c9"
       def install
         bin.install "chglog"
       end
