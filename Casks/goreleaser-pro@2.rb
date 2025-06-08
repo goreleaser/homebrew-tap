@@ -37,10 +37,11 @@ cask "goreleaser-pro@2" do
   end
 
   conflicts_with: cask: [
-                    goreleaser-pro
+                    goreleaser
                   ],
                   formula: [
-                    goreleaser                    goreleaser-pro
+                    goreleaser,
+                    goreleaser-pro
                   ]
 
   # No zap stanza required
