@@ -2,7 +2,8 @@
 cask "goreleaser" do
   desc "Release engineering, simplified"
   homepage "https://goreleaser.com"
-  version "2.10.0"
+  version "2.10.1"
+  license "MIT"
 
   livecheck do
     skip "Auto-generated on release."
@@ -10,39 +11,35 @@ cask "goreleaser" do
 
   binary "goreleaser"
   manpage "manpages/goreleaser.1.gz"
-  bash_completion "completions/goreleaser.bash"
-  zsh_completion "completions/goreleaser.zsh"
-  fish_completion "completions/goreleaser.fish"
+  bash_completions "completions/goreleaser.bash"
+  zsh_completions "completions/goreleaser.zsh"
+  fish_completions "completions/goreleaser.fish"
 
   on_macos do
     on_intel do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.0/goreleaser_Darwin_x86_64.tar.gz"
-      sha256 "a0df47497aab1c81f4b4cd7d7d13248fca7c1b979355bddedd3a41f560af1ab9"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Darwin_x86_64.tar.gz"
+      sha256 "2a283e4d08a68ae744f996319a592283bb5887fc62266206713daaece827b38a"
     end
     on_arm do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.0/goreleaser_Darwin_arm64.tar.gz"
-      sha256 "aa89a422e463a27e90ce50f9f1959283591bef81ad53dea617bed375e8c66c60"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Darwin_arm64.tar.gz"
+      sha256 "1c89d3bf9b9a91770aad5d9f985a9d4b6e6f950426bb05e666597c66e45f1f73"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.0/goreleaser_Linux_x86_64.tar.gz"
-      sha256 "2ec3033c0301eb2594ad768560dc2b618e2535ef92b313de841bfe2ac83b68b2"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Linux_x86_64.tar.gz"
+      sha256 "9f51d691556d86f0502c32ae1bf37bb3373fb6ae481f4c4d5e10feacdacef0bb"
     end
     on_arm do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.0/goreleaser_Linux_arm64.tar.gz"
-      sha256 "5d813e4d68a5d4ce5eac4a0f1121df659705d502fee84bd3c551305ee73241f2"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Linux_arm64.tar.gz"
+      sha256 "66abbb574ceb3b536e24b2ea64d738e555cfb92fe6fc76bec42cc636bd7cce68"
     end
   end
 
-  conflicts_with formula: [
-                    "goreleaser-pro",
-                    "goreleaser"
-                ],
-                cask: [
-                  "goreleaser-pro"
-                ]
+  conflicts_with formula: "goreleaser-pro"
+  conflicts_with formula: "goreleaser"
+  conflicts_with cask: "goreleaser-pro"
 
   # No zap stanza required
 end
