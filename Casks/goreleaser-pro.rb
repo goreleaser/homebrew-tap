@@ -40,7 +40,8 @@ cask "goreleaser-pro" do
                     goreleaser-pro
                   ],
                   formula: [
-                    goreleaser                    goreleaser-pro
+                    goreleaser,
+                    goreleaser-pro
                   ]
 
   # No zap stanza required
