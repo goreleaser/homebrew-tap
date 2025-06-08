@@ -37,7 +37,7 @@ cask "goreleaser-pro" do
   end
 
   conflicts_with: cask: [
-                    goreleaser-pro
+                    goreleaser
                   ],
                   formula: [
                     goreleaser,
