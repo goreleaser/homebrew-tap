@@ -3,7 +3,6 @@ cask "goreleaser" do
   desc "Release engineering, simplified"
   homepage "https://goreleaser.com"
   version "2.10.0"
-  license "MIT"
 
   livecheck do
     skip "Auto-generated on release."
@@ -11,9 +10,9 @@ cask "goreleaser" do
 
   binary "goreleaser"
   manpage "manpages/goreleaser.1.gz"
-  bash_completions "completions/goreleaser.bash"
-  zsh_completions "completions/goreleaser.zsh"
-  fish_completions "completions/goreleaser.fish"
+  bash_completion "completions/goreleaser.bash"
+  zsh_completion "completions/goreleaser.zsh"
+  fish_completion "completions/goreleaser.fish"
 
   on_macos do
     on_intel do
