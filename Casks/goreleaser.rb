@@ -36,9 +36,13 @@ cask "goreleaser" do
     end
   end
 
-  conflicts_with formula: "goreleaser-pro"
-  conflicts_with formula: "goreleaser"
-  conflicts_with cask: "goreleaser-pro"
+  conflicts_with formula: [
+                    "goreleaser-pro",
+                    "goreleaser"
+                ],
+                cask: [
+                  "goreleaser-pro"
+                ]
 
   # No zap stanza required
 end
