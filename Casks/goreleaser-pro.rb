@@ -8,7 +8,7 @@ cask "goreleaser-pro" do
     skip "Auto-generated on release."
   end
 
-  binary "goreleaser-pro"
+  binary "goreleaser"
   manpage "manpages/goreleaser.1.gz"
   bash_completion "completions/goreleaser.bash"
   zsh_completion "completions/goreleaser.zsh"
