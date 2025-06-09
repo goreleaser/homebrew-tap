@@ -36,12 +36,12 @@ cask "goreleaser-pro" do
     end
   end
 
-  conflicts_with: cask: [
-                    goreleaser
+  conflicts_with cask: [
+                    goreleaser,
                   ],
                   formula: [
                     goreleaser,
-                    goreleaser-pro
+                    goreleaser-pro,
                   ]
 
   # No zap stanza required
