@@ -3,7 +3,6 @@ cask "goreleaser" do
   desc "Release engineering, simplified"
   homepage "https://goreleaser.com"
   version "2.10.1"
-  license "MIT"
 
   livecheck do
     skip "Auto-generated on release."
@@ -38,12 +37,12 @@ cask "goreleaser" do
   end
 
   conflicts_with formula: [
-                  "goreleaser-pro", 
-                  "goreleaser
-                ],
-                cask: [
-                  "goreleaser-pro"
-                ]
+      "goreleaser-pro", 
+      "goreleaser",
+    ],
+    cask: [
+      "goreleaser-pro",
+    ]
 
   # No zap stanza required
 end
