@@ -2,7 +2,7 @@
 cask "goreleaser-pro@2" do
   desc "Release engineering, simplified."
   homepage "https://goreleaser.com"
-  version "2.10.1"
+  version "2.10.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,33 +16,33 @@ cask "goreleaser-pro@2" do
 
   on_macos do
     on_intel do
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.1/goreleaser-pro_Darwin_x86_64.tar.gz"
-      sha256 "6986fc489bf6d88bbe2dd04c97b558c4e042089f04191903dbc9274cc1f93a79"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.2/goreleaser-pro_Darwin_x86_64.tar.gz"
+      sha256 "5f0388d1facbe6dc50cc3e02b58f9771ecb7778cca2b1b6ff7f40caa1557cb1b"
     end
     on_arm do
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.1/goreleaser-pro_Darwin_arm64.tar.gz"
-      sha256 "4f3933d57d4c7bfff62f91016ea6cd2318517684b5b8e9edc8ef84ccd5cd9da7"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.2/goreleaser-pro_Darwin_arm64.tar.gz"
+      sha256 "5058b3758f04f931075e9056d038f7401efcaf31eea36267ad0690fb17899904"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.1/goreleaser-pro_Linux_x86_64.tar.gz"
-      sha256 "12340f005815b0df164f8b0edef47a199ce06219ba232e61343bbfdd29e42ca1"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.2/goreleaser-pro_Linux_x86_64.tar.gz"
+      sha256 "b25c4b3f07899911b7b69816f785f71499995cd7e83ce9181d24a5df30083a7e"
     end
     on_arm do
-      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.1/goreleaser-pro_Linux_arm64.tar.gz"
-      sha256 "ea01642e494b7e790d6c3543a4bc693fb561dd3d4d7ae59faa583727923a79d9"
+      url "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.10.2/goreleaser-pro_Linux_arm64.tar.gz"
+      sha256 "c330b3cb5c260c783b9d7bf0f183cd676ce21b0bdb722220a4f5b16e633c2b52"
     end
   end
 
   conflicts_with cask: [
-    "goreleaser",
-  ],
-  formula: [
-    "goreleaser",
-    "goreleaser-pro",
-  ]
+      "goreleaser",
+    ],
+    formula: [
+      "goreleaser",
+      "goreleaser-pro",
+    ]
 
   # No zap stanza required
 end
