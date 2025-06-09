@@ -8,7 +8,7 @@ cask "goreleaser-pro@2" do
     skip "Auto-generated on release."
   end
 
-  binary "goreleaser-pro"
+  binary "goreleaser"
   manpage "manpages/goreleaser.1.gz"
   bash_completion "completions/goreleaser.bash"
   zsh_completion "completions/goreleaser.zsh"
@@ -36,13 +36,13 @@ cask "goreleaser-pro@2" do
     end
   end
 
-  conflicts_with: cask: [
-                    goreleaser
-                  ],
-                  formula: [
-                    goreleaser,
-                    goreleaser-pro
-                  ]
+  conflicts_with cask: [
+    "goreleaser",
+  ],
+  formula: [
+    "goreleaser",
+    "goreleaser-pro",
+  ]
 
   # No zap stanza required
 end
