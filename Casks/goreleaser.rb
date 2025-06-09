@@ -2,7 +2,7 @@
 cask "goreleaser" do
   desc "Release engineering, simplified"
   homepage "https://goreleaser.com"
-  version "2.10.1"
+  version "2.10.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,33 +16,32 @@ cask "goreleaser" do
 
   on_macos do
     on_intel do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Darwin_x86_64.tar.gz"
-      sha256 "2a283e4d08a68ae744f996319a592283bb5887fc62266206713daaece827b38a"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.2/goreleaser_Darwin_x86_64.tar.gz"
+      sha256 "26cd36d449f126ff7dbfc04111f402ce82b7867c424f90a2c9a0e22177da4a88"
     end
     on_arm do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Darwin_arm64.tar.gz"
-      sha256 "1c89d3bf9b9a91770aad5d9f985a9d4b6e6f950426bb05e666597c66e45f1f73"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.2/goreleaser_Darwin_arm64.tar.gz"
+      sha256 "4fe676f4d7d9cddf4930b40e1701318943ec473c54bbd40e252b17b6c2419246"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Linux_x86_64.tar.gz"
-      sha256 "9f51d691556d86f0502c32ae1bf37bb3373fb6ae481f4c4d5e10feacdacef0bb"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.2/goreleaser_Linux_x86_64.tar.gz"
+      sha256 "7557d103d66efad2cc3c61c458b6ec948d8cb0c49f734fbb94075e9f774076df"
     end
     on_arm do
-      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.1/goreleaser_Linux_arm64.tar.gz"
-      sha256 "66abbb574ceb3b536e24b2ea64d738e555cfb92fe6fc76bec42cc636bd7cce68"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v2.10.2/goreleaser_Linux_arm64.tar.gz"
+      sha256 "708050ebcf0a60d3007317920e1851f168dff7ba0a8388437acb016d3b0dbe61"
     end
   end
 
-  conflicts_with formula: [
-      "goreleaser-pro", 
-      "goreleaser",
-    ],
-    cask: [
-      "goreleaser-pro",
-    ]
+  conflicts_with: cask: [
+                    goreleaser-pro
+                  ],
+                  formula: [
+                    goreleaser                    goreleaser-pro
+                  ]
 
   # No zap stanza required
 end
