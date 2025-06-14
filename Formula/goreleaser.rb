@@ -8,6 +8,8 @@ class Goreleaser < Formula
   version "2.9.0"
   license "MIT"
 
+  disable! date: "2025-06-14", because: "the cask should be used now instead", replacement_cask: "goreleaser"
+
   depends_on "deno" => :optional
   depends_on "git"
   depends_on "go" => :optional
