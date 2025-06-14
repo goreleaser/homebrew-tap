@@ -5,7 +5,7 @@
 class Goreleaser < Formula
   desc "Release engineering, simplified"
   homepage "https://goreleaser.com"
-  version "2.9.0"
+  version "2.9.1"
   license "MIT"
 
   disable! date: "2025-06-14", because: "the cask should be used now instead", replacement_cask: "goreleaser"
