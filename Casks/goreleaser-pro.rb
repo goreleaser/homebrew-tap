@@ -38,10 +38,6 @@ cask "goreleaser-pro" do
 
   conflicts_with cask: [
       "goreleaser",
-    ],
-    formula: [
-      "goreleaser",
-      "goreleaser-pro",
     ]
 
   # No zap stanza required
