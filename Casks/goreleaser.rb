@@ -3,7 +3,7 @@ cask "goreleaser" do
   name "goreleaser"
   desc "Release engineering, simplified"
   homepage "https://goreleaser.com"
-  version "2.12.6"
+  version "2.12.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -19,12 +19,12 @@ cask "goreleaser" do
     on_intel do
       url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Darwin_x86_64.tar.gz",
         verified: "github.com/goreleaser/goreleaser/releases/download"
-      sha256 "d6b9b3e58f12bdae09871048a08093fdca1b32824ea2683d3ba630f5aa4e5cc5"
+      sha256 "7c1198020c3e0be6ee1a7e13e0ac4a4954690d42a0e4ede25f872542ef441f0c"
     end
     on_arm do
       url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Darwin_arm64.tar.gz",
         verified: "github.com/goreleaser/goreleaser/releases/download"
-      sha256 "1eb6b2f92f50490e078c53c2c8f8a22ff133ea083aa58c7b3739e5696a3c532b"
+      sha256 "50fff56875b9b981aae6fec1265b081dcb4c8a3a3402656b62d8699b00befb31"
     end
   end
 
@@ -32,12 +32,12 @@ cask "goreleaser" do
     on_intel do
       url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Linux_x86_64.tar.gz",
         verified: "github.com/goreleaser/goreleaser/releases/download"
-      sha256 "29894f4c556b548f49f618177b389e22d88d28ec8419f29310cfa9e1bc7f9fc1"
+      sha256 "de95c5d1e728e18753c3ddcf02974d63d6432f0a7355a5afa6813971a95a01b8"
     end
     on_arm do
       url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Linux_arm64.tar.gz",
         verified: "github.com/goreleaser/goreleaser/releases/download"
-      sha256 "c5a44379463784148835a60129e5ab56509760b4ea725f5bcf085512e23859db"
+      sha256 "7948d8ce09cce3d3a2fff9202eae47d2223958e508f849b340345583bb2c0e1f"
     end
   end
 
