@@ -3,7 +3,7 @@ cask "mcp" do
   name "mcp"
   desc "GoReleaser MCP server"
   homepage "https://goreleaser.com/mcp"
-  version "0.1.1"
+  version "0.2.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,27 +13,27 @@ cask "mcp" do
 
   on_macos do
     on_intel do
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/mcp_Darwin_x86_64.tar.gz",
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_x86_64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "f4892247ebcb49f483afbd5d8393316302b11e8af3533ee2177c5f393b6323b5"
+      sha256 "1f120b7eb975b51bc3048e137bd0708e13e322cb19ef1ee1fe51808e0a2bc98d"
     end
     on_arm do
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/mcp_Darwin_arm64.tar.gz",
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_arm64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "81474379880245327b856ccc79401bf4bfa56d42800a38aafdee60d2585ec01e"
+      sha256 "3532a93ad1e8327b51cb73aa1e772439335af7396ae3514a7e8eefbdbf7e8c9b"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/mcp_Linux_x86_64.tar.gz",
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_x86_64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "4d2e66a34cfc9e9305669ff0fdd872c62ae86d128d0d5c924f2f2c563005f992"
+      sha256 "16c8734eba4729fa31e2e4e097cb56d8b0afb33752aae4deb481ebcfe95a62b5"
     end
     on_arm do
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/mcp_Linux_arm64.tar.gz",
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_arm64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "58d7963ea3b4a95fb198245106d5aa9a1239ad5ff419ed0f10a6379fec962a7b"
+      sha256 "a40ed1fbce5e209c8f91412cb821fa552673f79b21448eabf754af0c73d18227"
     end
   end
 
