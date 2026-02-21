@@ -3,7 +3,7 @@ cask "mcp" do
   name "mcp"
   desc "GoReleaser MCP server"
   homepage "https://goreleaser.com/mcp"
-  version "0.3.2"
+  version "0.3.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "mcp" do
     on_intel do
       url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_x86_64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "ef25c5aab208cc332eac579c0bde5ba22c1d5a27172b083546c1586232327e68"
+      sha256 "f485d32681d97d6c7f61fcef3d6600992975b675f4c3dff7db91bcadb5f867f2"
     end
     on_arm do
       url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_arm64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "3b43e7e718713b9337fce3e84e86a33b86e1d6b2885c56d0c38c749cb49b7ab7"
+      sha256 "65780947b86a737f1fae15e481dfe251ea513399daba6fd9d985c4de15c32a43"
     end
   end
 
@@ -28,12 +28,12 @@ cask "mcp" do
     on_intel do
       url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_x86_64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "8b2e01bc5ffaef55901982e9469fe5270a9dcc2e517fbdf1d06f50ee6b7e50dd"
+      sha256 "c584188095957592d1fabcdd18464e47d2476bd7201c7e4f926a63f5318a65ec"
     end
     on_arm do
       url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_arm64.tar.gz",
         verified: "github.com/goreleaser/mcp/releases/download"
-      sha256 "2e0de65971ff93fe5bbde82e1045ce7d03f9accba3fb11a844c4daba5454e639"
+      sha256 "4c8108b0ddab29f9aa5392cd1d9027855c401e65289d662db811d281fa91167d"
     end
   end
 
