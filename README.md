@@ -4,4 +4,8 @@ Homebrew Formulae to @goreleaser binaries, powered by @goreleaser
 
 ```sh
 brew install --cask goreleaser/tap/goreleaser
+brew install --cask goreleaser/tap/goreleaser-pro
+brew install --cask goreleaser/tap/nfpm
+brew install --cask goreleaser/tap/mcp
+brew install --cask goreleaser/tap/sponsors
 ```
