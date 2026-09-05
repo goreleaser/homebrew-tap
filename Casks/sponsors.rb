@@ -5,14 +5,12 @@ cask "sponsors" do
   on_macos do
     on_intel do
       sha256 "60058e7bb3025ba5ad5bec49eb0fa62daffd70519ed4495ad4792ea49a0bb4ea"
-      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_darwin_amd64.tar.gz",
-        verified: "github.com/goreleaser/sponsors/releases/download"
+      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_darwin_amd64.tar.gz"
       rename "sponsors_darwin_amd64/sponsors", "sponsors"
     end
     on_arm do
       sha256 "da5ae6282fcad35d99248c9d2251c51f3308ac8fed5cac8d9b95f917a69abe0e"
-      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_darwin_arm64.tar.gz",
-        verified: "github.com/goreleaser/sponsors/releases/download"
+      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_darwin_arm64.tar.gz"
       rename "sponsors_darwin_arm64/sponsors", "sponsors"
     end
   end
@@ -20,14 +18,12 @@ cask "sponsors" do
   on_linux do
     on_intel do
       sha256 "0068e77fc51a1d7df2cdb126d79ba650ddb5861e7701c2dbc8217e562876179e"
-      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_linux_amd64.tar.gz",
-        verified: "github.com/goreleaser/sponsors/releases/download"
+      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_linux_amd64.tar.gz"
       rename "sponsors_linux_amd64/sponsors", "sponsors"
     end
     on_arm do
       sha256 "06a9676aabd728abe077a2478eaa998dd665784f253457659bc525f3f23d0c1e"
-      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_linux_arm64.tar.gz",
-        verified: "github.com/goreleaser/sponsors/releases/download"
+      url "https://github.com/goreleaser/sponsors/releases/download/v#{version}/sponsors_linux_arm64.tar.gz"
       rename "sponsors_linux_arm64/sponsors", "sponsors"
     end
   end

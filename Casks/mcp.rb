@@ -5,25 +5,21 @@ cask "mcp" do
   on_macos do
     on_arm do
       sha256 "0f042e5598e9419719750ca91008dced38c37a28414a62307a19c4f37238531b"
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_arm64.tar.gz",
-        verified: "github.com/goreleaser/mcp/releases/download"
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_arm64.tar.gz"
     end
     on_intel do
       sha256 "06f80e0df3f08af80e84d8136d3b52277dc122ea39cb6ed05cefeaafe39579e6"
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_x86_64.tar.gz",
-        verified: "github.com/goreleaser/mcp/releases/download"
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
       sha256 "cc195ec97b4361f35208cd4a45e28df268b8ef59ed1ad79b37e9ccd57976aa6a"
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_arm64.tar.gz",
-        verified: "github.com/goreleaser/mcp/releases/download"
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_arm64.tar.gz"
     end
     on_intel do
       sha256 "1357fd25942f6e5e92e9d76c1a51be2acbee17f7c1b899f69bb40f920349d1cd"
-      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_x86_64.tar.gz",
-        verified: "github.com/goreleaser/mcp/releases/download"
+      url "https://github.com/goreleaser/mcp/releases/download/v#{version}/goreleaser-mcp_Linux_x86_64.tar.gz"
     end
   end
 

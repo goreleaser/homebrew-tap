@@ -5,25 +5,21 @@ cask "goreleaser" do
   on_macos do
     on_arm do
       sha256 "1c42b87cbce094a60f1a94dab0c71f640dbe4396fa5dc632b5c25bf14b1e88fc"
-      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Darwin_arm64.tar.gz",
-        verified: "github.com/goreleaser/goreleaser/releases/download"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Darwin_arm64.tar.gz"
     end
     on_intel do
       sha256 "c115f9ca07163d55885ba2276c5c2efebc95d60f7f7f69fe2dd6a54e97ac6db4"
-      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Darwin_x86_64.tar.gz",
-        verified: "github.com/goreleaser/goreleaser/releases/download"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
       sha256 "1975566c9668e6f4247e6bb57656f21da13635c24d948ef47b1232e5c864a35b"
-      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Linux_arm64.tar.gz",
-        verified: "github.com/goreleaser/goreleaser/releases/download"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Linux_arm64.tar.gz"
     end
     on_intel do
       sha256 "41cdf49b653784b03a08013dd99e382cd5d463049e915c2d818eaed182ae6197"
-      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Linux_x86_64.tar.gz",
-        verified: "github.com/goreleaser/goreleaser/releases/download"
+      url "https://github.com/goreleaser/goreleaser/releases/download/v#{version}/goreleaser_Linux_x86_64.tar.gz"
     end
   end
 
