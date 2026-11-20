@@ -1,4 +1,5 @@
 {
+  "chglog": "chglog",
   "goreleaser": "goreleaser",
   "goreleaser-pro": "goreleaser-pro"
 }
